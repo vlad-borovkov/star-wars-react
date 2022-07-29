@@ -1,0 +1,4 @@
+.characters-info__lists {
+    display: flex;
+    overflow-y: scroll;
+}

@@ -1,0 +1,6 @@
+.form__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  flex-direction: row;
+  }

@@ -1,0 +1,12 @@
+.form__input {
+    font-size: 0.8em;
+    width: 150px;
+    height: 50px;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  
+  .form__input::placeholder {
+    color: #d3d3d3;
+  }

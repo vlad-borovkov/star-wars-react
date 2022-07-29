@@ -1,0 +1,16 @@
+.form__select-container {
+    position: relative;  
+}
+
+.form__select-container::before {
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    content: "\e600";
+    position: absolute;
+    right: 10px;
+    top: 18px;
+    z-index: -1;
+  }

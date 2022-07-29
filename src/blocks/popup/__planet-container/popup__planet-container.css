@@ -1,0 +1,9 @@
+.popup__planet-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 88%;
+  min-height: 80%;
+  background-color: #e3d5d1;
+  align-items: center;
+  }

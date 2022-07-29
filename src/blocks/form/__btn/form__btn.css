@@ -1,0 +1,11 @@
+.form__btn {
+  font-size: 0.8em;
+  width: 100px;
+  background-color: #e3d5d1;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.form__btn:hover {
+  opacity: 0.6;
+}

@@ -9,3 +9,35 @@
 @import url(./blocks/header/__sign-in-up-button/header__sign-in-up-button.css);
 @import url(./blocks/header/__sign-in-up-button/_logout/header__sign-in-up-button_logout.css);
 @import url(./blocks/header/__user-email/header__user-email.css);
+
+@import url(./blocks/planets-title/planets-title.css);
+@import url(./blocks/planets-grid/planets-grid.css);
+@import url(./blocks/card/card.css);
+@import url(./blocks/card/__description/card__description.css);
+@import url(./blocks/card/__planet-info-list/card__planet-info-list.css);
+@import url(./blocks/card/__title/card__title.css);
+@import url(./blocks/card/__planet-info-list-item/card__planet-info-list-item.css);
+
+@import url(./blocks/popup/popup.css);
+@import url(./blocks/popup/_on/popup_on.css);
+@import url(./blocks/popup/__planet-container/popup__planet-container.css);
+@import url(./blocks/popup/__planet-container-close-icone/popup__planet-container-close-icone.css);
+@import url(./blocks/popup/__description-container/popup__description-container.css);
+@import url(./blocks/popup/__planet-info/popup__planet-info.css);
+@import url(./blocks/popup/__planet-info-title/popup__planet-info-title.css);
+
+@import url(./blocks/form/form.css);
+@import url(./blocks/form/__btn/form__btn.css);
+@import url(./blocks/form/__input/_type_entity-id/form__input_type_entity-id.css);
+@import url(./blocks/form/__input/form__input.css);
+@import url(./blocks/form/__select-container/form__select-container.css);
+@import url(./blocks/form/__select/form__select.css);
+@import url(./blocks/form/__title/form__title.css);
+@import url(./blocks/form/__wrapper/form__wrapper.css);
+@import url(./blocks/form/_type_search/form_type_search.css);
+
+@import url(./blocks/characters-info/characters-info.css);
+@import url(./blocks/characters-info/__title/characters-info__title.css);
+@import url(./blocks/characters-info/__lists/characters-info__lists.css);
+
+

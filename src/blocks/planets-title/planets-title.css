@@ -1,0 +1,11 @@
+.planets-title {
+  margin: 0 auto;
+  padding: 10px;
+  font-family: Inter, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 29px;
+  text-align: center;
+  color: #000000;
+}

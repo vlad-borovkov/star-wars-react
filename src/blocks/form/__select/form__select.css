@@ -1,0 +1,14 @@
+.form__select {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  background-image: none;
+  appearance: none;
+  font-size: 0.8em;
+  width: 50px;
+  height: 25px;
+  padding: 0 10px;
+  border-bottom: 1px solid #f1f1f1;
+  border-radius: 0;
+  box-sizing: border-box;
+  }
