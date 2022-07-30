@@ -12,7 +12,7 @@ import { dataPlanet } from "../contexts/DataPlanet";
 const Main = ({clickOnCard}) => {
 
 const currentPlanetData = React.useContext(PlanetContext); //dataPlanet //
-console.log(currentPlanetData)
+//console.log(currentPlanetData)
   return (
     <main>
       <h1 className="planets-title">
@@ -30,7 +30,7 @@ console.log(currentPlanetData)
           />
           ))}
         </ul>
-        ) : <p>"Loading..."</p>}
+        ) : (<p>"Loading..."</p>)}
         
       </section>
     </main>

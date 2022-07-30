@@ -20,11 +20,12 @@
 
 @import url(./blocks/popup/popup.css);
 @import url(./blocks/popup/_on/popup_on.css);
+@import url(./blocks/popup/__planet-info-title/popup__planet-info-title.css);
 @import url(./blocks/popup/__planet-container/popup__planet-container.css);
 @import url(./blocks/popup/__planet-container-close-icone/popup__planet-container-close-icone.css);
 @import url(./blocks/popup/__description-container/popup__description-container.css);
 @import url(./blocks/popup/__planet-info/popup__planet-info.css);
-@import url(./blocks/popup/__planet-info-title/popup__planet-info-title.css);
+
 
 @import url(./blocks/form/form.css);
 @import url(./blocks/form/__btn/form__btn.css);

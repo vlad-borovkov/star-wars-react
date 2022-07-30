@@ -13,3 +13,7 @@
   color: #000000;
   word-wrap: break-word;
 }
+
+.card__title:hover {
+  border: 2px dotted;
+}

@@ -31,6 +31,11 @@ class Api {
       const planetsFromServer = "/planets";
       return this.makeRequest(planetsFromServer)
     }
+
+    getResidentsFromServer(number) {
+      const peopleFromServer = `/people/${number}`;
+      return this.makeRequest(peopleFromServer)
+    }
   
     changeUserInfo(userValue) {
       const requestUrl = "/users/me";

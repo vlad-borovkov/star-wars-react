@@ -27,23 +27,27 @@ const App = () => {
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
+  
+//массив резидентов с сервера
+const [residents, setResidents] = React.useState([])
   function handleClosePopup() {
     setPopupOpen(false)
+    setSelectedCard({});
+    setResidents([]);
   }
   function handleOpenPopup() {
     setPopupOpen(true)
   }
-const  [isPopupOpen, setPopupOpen] = React.useState(false)
+const [isPopupOpen, setPopupOpen] = React.useState(false)
 const [selectedCard, setSelectedCard] = React.useState({});
-  
+  //console.log(selectedCard)
+
 const handleClickOnCard = (card) => {
     handleOpenPopup();
-    console.log(card);
+    setSelectedCard(card);
+    setResidents(card.residents)
   };
-
-
-
+  
   return (
     <div className="page">
       <Header />
@@ -51,10 +55,11 @@ const handleClickOnCard = (card) => {
           <Main 
           clickOnCard={handleClickOnCard}/>
 
-
           <InfoPlanetDetail
           onClose={handleClosePopup}
           isOpen={isPopupOpen}
+          clickedCard={selectedCard}
+          residentsData={residents}
           />
       </PlanetContext.Provider>
     </div>

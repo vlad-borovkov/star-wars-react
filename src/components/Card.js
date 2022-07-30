@@ -9,8 +9,8 @@ const Card = ({ card, onCardClick, onConfirmDelete }) => {
 
   return (
     <li style={{ listStyleType: "none" }}>
-      <div className="card">
-        <h2 className="card__title" onClick={handleClick}>
+      <div className="card" onClick={handleClick}>
+        <h2 className="card__title">
           {card.name}
         </h2>
         <div className="card__description">
