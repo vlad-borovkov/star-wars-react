@@ -4,62 +4,56 @@ import Spinner from "./Spinner";
 import { api } from "../utils/Api";
 
 const InfoPlanetDetail = ({ onClose, isOpen, clickedCard, residentsData }) => {
+  const [residentsArray, setResidentsArray] = React.useState([]);
 
-const [residentsArray, setResidentsArray] = React.useState([]);
-
-//универсальная функция получения объектов персонажей
-function setPeopleFromServer() {
-  const residentPromises = residentsData.map((item) =>
-  api.getResidentsFromServer(item.replace(/[^0-9]/g, ""))
-);
-Promise.all(residentPromises).then(values => {
-  setResidentsArray(values);
-});
-}
-
-function setFilteredPeopleFromServer(genderSelect) {
-  const residentPromises = residentsData.map((item) =>
-  api.getResidentsFromServer(item.replace(/[^0-9]/g, ""))
-);
-Promise.all(residentPromises).then(values => {
-  setResidentsArray(values.filter(el => el.gender === genderSelect));
-})
-
-}
-
-//рендерим карточки людей из api запроса при открытии карточки
-React.useEffect(() => {
-  setPeopleFromServer()
- 
-}, [clickedCard]);
-
-//очищаем массив людей при закрытии
-React.useEffect(()=> {
-  setResidentsArray([]);
-  setSexSelector('all')
-}, [onClose])
-
-//функция поиска при изменении селектора
-const findByGender = (genderSelect) => {
-  if (genderSelect === 'all') {
-    setPeopleFromServer()
-    setSexSelector("all")
+  //универсальная функция получения объектов персонажей
+  function setPeopleFromServer() {
+    const residentPromises = residentsData.map((item) =>
+      api.getResidentsFromServer(item.replace(/[^0-9]/g, ""))
+    );
+    Promise.all(residentPromises).then((values) => {
+      setResidentsArray(values);
+    });
   }
-  else setFilteredPeopleFromServer(genderSelect)
-}
 
-// передача value селектора после сабмита формы
-const [sexSelector, setSexSelector] = React.useState("")
-function handleSubmitForm(e) {
-  e.preventDefault();
-  findByGender(
-    sexSelector
-  ) 
-}
-// захват переключения селектора
-function handleSelectorChange(e) {
-   setSexSelector(e.target.value)
-}
+  function setFilteredPeopleFromServer(genderSelect) {
+    const residentPromises = residentsData.map((item) =>
+      api.getResidentsFromServer(item.replace(/[^0-9]/g, ""))
+    );
+    Promise.all(residentPromises).then((values) => {
+      setResidentsArray(values.filter((el) => el.gender === genderSelect));
+    });
+  }
+
+  //рендерим карточки людей из api запроса при открытии карточки
+  React.useEffect(() => {
+    setPeopleFromServer();
+  }, [clickedCard]);
+
+  //очищаем массив людей при закрытии
+  React.useEffect(() => {
+    setResidentsArray([]);
+    setSexSelector("all");
+  }, [onClose]);
+
+  //функция поиска при изменении селектора
+  const findByGender = (genderSelect) => {
+    if (genderSelect === "all") {
+      setPeopleFromServer();
+      setSexSelector("all");
+    } else setFilteredPeopleFromServer(genderSelect);
+  };
+
+  // передача value селектора после сабмита формы
+  const [sexSelector, setSexSelector] = React.useState("");
+  function handleSubmitForm(e) {
+    e.preventDefault();
+    findByGender(sexSelector);
+  }
+  // захват переключения селектора
+  function handleSelectorChange(e) {
+    setSexSelector(e.target.value);
+  }
 
   return (
     <div className={`popup ${isOpen ? "popup_on" : ""}`}>
@@ -71,10 +65,11 @@ function handleSelectorChange(e) {
         ></button>
         <h2 className="popup__planet-container-title">{clickedCard.name}</h2>
 
-        <form 
-        className="search form form_type_search"
-        id="sex"
-        onSubmit={handleSubmitForm}>
+        <form
+          className="search form form_type_search"
+          id="sex"
+          onSubmit={handleSubmitForm}
+        >
           <h3 className="form__title">specify gender</h3>
           <div className="form__wrapper">
             <div className="form__select-container">
@@ -84,14 +79,12 @@ function handleSelectorChange(e) {
                 value={sexSelector}
                 onChange={handleSelectorChange}
               >
-                <option value="all" >All</option>
+                <option value="all">All</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
               </select>
             </div>
-            <button className="form__btn" >
-              Search
-            </button>
+            <button className="form__btn">Search</button>
           </div>
         </form>
 
@@ -129,14 +122,15 @@ function handleSelectorChange(e) {
           <div className="characters-info">
             <h3 className="characters-info__title">Character's info</h3>
             <div className="characters-info__lists">
-             <ul className="person-grid">
-              {residentsArray.length > 0 ? (residentsArray.map((cardItem, index) => (
-                    <CharachterCard
-                      key={index}
-                      card={cardItem}
-                    />
-                  ))) : (<Spinner/>) }
-                </ul>
+              <ul className="person-grid">
+                {residentsArray.length > 0 ? (
+                  residentsArray.map((cardItem, index) => (
+                    <CharachterCard key={index} card={cardItem} />
+                  ))
+                ) : (
+                  <Spinner />
+                )}
+              </ul>
             </div>
           </div>
         </div>
