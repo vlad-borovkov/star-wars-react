@@ -5,7 +5,7 @@ import logoPath from "./../images/logo-star-wars.png";
 const Header = (props) => {
     
   return (
-    <div className="page">
+    
       <header className="header">
         <img
           className="header__group-logo"
@@ -14,7 +14,7 @@ const Header = (props) => {
         />
         <nav className="header__menu"></nav>
       </header>
-    </div>
+    
   );
 };
 

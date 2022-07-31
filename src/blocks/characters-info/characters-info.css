@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 586px;
-    height: 423px;
-    
-    /* border: 2px dotted; */
+    width: 61vw;
+    height: 60vh;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }

@@ -4,6 +4,7 @@
   background-color: #e3d5d1;
   border-radius: 2px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .form__btn:hover {

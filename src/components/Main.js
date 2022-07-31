@@ -5,6 +5,7 @@ import { PlanetContext } from "../contexts/PlanetContext";
 // import { CardsContext } from "./../contexts/CardsContext";
 
 import Card from "./Card";
+import Spinner from "./Spinner";
 import { dataPlanet } from "../contexts/DataPlanet";
 
 
@@ -20,7 +21,7 @@ const currentPlanetData = React.useContext(PlanetContext); //dataPlanet //
       </h1>
 
       <section>
-        {currentPlanetData ? (
+        {currentPlanetData.length > 0 ? (
         <ul className="planets-grid">
           {currentPlanetData.map((cardItem, index) => (
             <Card
@@ -30,7 +31,7 @@ const currentPlanetData = React.useContext(PlanetContext); //dataPlanet //
           />
           ))}
         </ul>
-        ) : (<p>"Loading..."</p>)}
+        ) : (<Spinner/>) }
         
       </section>
     </main>

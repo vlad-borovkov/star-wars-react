@@ -27,9 +27,10 @@ const App = () => {
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  
+
 //массив резидентов с сервера
 const [residents, setResidents] = React.useState([])
+
   function handleClosePopup() {
     setPopupOpen(false)
     setSelectedCard({});
@@ -41,6 +42,7 @@ const [residents, setResidents] = React.useState([])
 const [isPopupOpen, setPopupOpen] = React.useState(false)
 const [selectedCard, setSelectedCard] = React.useState({});
   //console.log(selectedCard)
+
 
 const handleClickOnCard = (card) => {
     handleOpenPopup();

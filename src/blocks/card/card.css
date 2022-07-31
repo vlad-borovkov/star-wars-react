@@ -6,4 +6,10 @@
     align-items: flex-start;
     position: relative;
     background-color: aliceblue;
+    box-shadow: 0px 1px 3px black;
+    
+}
+
+.card:hover {
+    box-shadow: 0px 1px 10px black;
 }

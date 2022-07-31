@@ -1,6 +1,7 @@
 .popup__description-container {
     display: flex;
     flex-direction: row;
-    width: 803px;
-    justify-content: space-between;
+    width: 80vw;
+    margin-top: 27px;
+    justify-content: space-around;
 }
