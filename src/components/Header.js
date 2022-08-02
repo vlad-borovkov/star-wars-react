@@ -1,5 +1,4 @@
 import React from "react";
-import { Route, Switch, Redirect, useHistory, Link } from "react-router-dom";
 import logoPath from "./../images/logo-star-wars.png";
 
 const Header = (props) => {
