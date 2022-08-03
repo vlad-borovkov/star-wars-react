@@ -8,6 +8,7 @@ const InfoPlanetDetail = ({ onClose, isOpen, clickedCard, residentsData }) => {
 
   //универсальная функция получения объектов персонажей
   function setPeopleFromServer() {
+    console.log(residentsData)
     const residentPromises = residentsData.map((item) =>
       api.getResidentsFromServer(item.replace(/[^0-9]/g, ""))
     );

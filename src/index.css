@@ -8,9 +8,6 @@
 @import url(./blocks/header/header.css);
 @import url(./blocks/header/__group-logo/header__group-logo.css);
 @import url(./blocks/header/__menu/header__menu.css);
-@import url(./blocks/header/__sign-in-up-button/header__sign-in-up-button.css);
-@import url(./blocks/header/__sign-in-up-button/_logout/header__sign-in-up-button_logout.css);
-@import url(./blocks/header/__user-email/header__user-email.css);
 
 @import url(./blocks/planets-title/planets-title.css);
 @import url(./blocks/planets-grid/planets-grid.css);
